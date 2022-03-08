@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap-icon/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.min.css">
+    
+    <title>subscriber managment</title>
+</head>
+<body>
+    <aside class="sideHeader" >
+        <button class="toggle" type="menu" id="toggle">
+            <i class="bi bi-list"></i>
+        </button>
+        <div class="logo">
+            <img src="assets/images/quality-control.png" alt="logo img">
+            <h4>Subscriber flow</h4>
+        </div>
+        <nav class="navBar" id="navbar">
+            <!-- <button class="toggle" type="menu" id="toggle">
+                <i class="bi bi-list"></i>
+            </button> -->
+            <a class="navItem active" href="#">
+                <span class="icon">
+                    <i class="bi bi-people"></i>
+                </span>
+                <span class="description">
+                    <h4>Dashboard</h4>
+                </span>
+            </a>
+            <a class="navItem" href="add.html">
+                <span class="icon">
+                    <i class="bi bi-plus-square"></i>
+                </span>
+                <span class="description">
+                     <h4>add subscribers</h4>
+                </span>
+            </a>
+        </nav>
+    </aside>
+    <main class="app">
+        <section class="container">
+            <article class="statusBoxs row">
+                <div class="expired col-12 col-md-3 mb-3">
+                    <span class="title">expired</span>
+                    <span class="innerValue" id="expiredTrainees">6</span>
+                    <span class="icon">
+                        <i class="bi bi-bookmark-x-fill"></i>
+                    </span>
+                </div>
+                <div class="new col-12 col-md-3 mb-3">
+                    <span class="title">active trainee</span>
+                    <span class="innerValue" id="activeTrainees">16</span>
+                    <span class="icon">
+                        <i class="bi bi-bookmark-check-fill"></i>
+                    </span>
+                </div>
+                <div class="total col-12 col-md-3 mb-3">
+                    <span class="title">Total Players</span>
+                    <span class="innerValue" id="totalTrainees" >6</span>
+                    <span class="icon">
+                        <i class="bi bi-bell-fill"></i>
+                    </span>
+                </div>
+            </article>
+            <article class="search row jusstify-content-center align-items-center mt-4" id="searchBox">
+                <div class="col-12 col-md-6">
+                    <label class="form-label text-uppercase text-light fw-bold" for="searchByName">search</label>
+                    <input class="form-control" type="search" name="search subscriber" id="searchByName" placeholder="search in subscribers by name ...">
+                </div>
+                <div class="col-12 col-md-6">
+                    <label  class="form-label text-uppercase text-light fw-bold" for="selectfilter">Filter Result</label>
+                    <select class="form-select" name="selectfilter" id="selectfilter">
+                        <option >select option search</option>
+                        <option value="expired">Expired Subscriber</option>
+                        <option value="active">Active Subscribers</option>
+                        <option value="all">all subscribers</option>
+                    </select>
+                </div>
+            </article>
+            <article class="row subscriberList">
+                <table class="table table-dark table-srapied">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</td>
+                            <th scope="col">Name</td>
+                            <th scope="col">Exercise type</td>
+                            <th scope="col">Subscription period</td>
+                            <th scope="col">Expiry date</td>
+                            <th scope="col">Price</td>
+                            <th scope="col">subscribe Status</td>
+                        </tr>
+                    </thead>
+                    <tbody id="innerData">
+                        <tr>
+                            <th scope="row">1</th>
+                            <td></td>
+                            <td></td>
+                            <td>no data yet try to add ..</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+    </main>
+
+    <script src="assets/js/vendor/sweetalert.min.js"></script>
+    <script src="assets/js/ManagmentSystem.js" type="module"></script>
+    <script src="assets/js/main.js" type="module"></script>
+</body>
+</html>

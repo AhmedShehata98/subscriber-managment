@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap-icon/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/add.min.css">
+    
+    <title>subscriber managment</title>
+</head>
+<body>
+    <aside class="sideHeader" >
+        <nav class="navBar" id="navbar">
+            <button class="toggle" type="menu" id="toggle">
+                <i class="bi bi-list"></i>
+            </button>
+            <div class="logo">
+                <img src="assets/images/quality-control.png" alt="logo img">
+                <h4>Subscriber flow</h4>
+            </div>
+            <a class="navItem" href="index.html">
+                <span class="icon">
+                    <i class="bi bi-people"></i>
+                </span>
+                <span class="description">
+                    <h4>Dashboard</h4>
+                </span>
+            </a>
+            <a class="navItem active" href="#">
+                <span class="icon">
+                    <i class="bi bi-plus-square"></i>
+                </span>
+                <span class="description">
+                     <h4>add subscribers</h4>
+                </span>
+            </a>
+        </nav>
+    </aside>
+    <main class="add">
+        <section class="container">
+            <form action="" class="row mt-5 pt-5" id="mainInputForm">
+                <div class="col-12 col-md-8 mb-3">
+                    <label class="form-label fw-bold text-uppercase text-light" for="fullName">Name</label>
+                    <input class="form-control text-capitalize" type="text" name="Name" id="fullName" placeholder="enter full subscriber name .." required>
+                </div>
+                <div class="col-12 col-md-4 mb-3">
+                    <label class="form-label fw-bold text-uppercase text-light" for="price">price</label>
+                    <input class="form-control text-capitalize" type="number" name="price" id="price" placeholder="Enter the subscription price.. " required>
+                </div>
+                <div class="col-12 col-md-6 mb-3">
+                    <label class="form-label fw-bold text-uppercase text-light" for="ExerciseType">Exercise type</label>
+                    <input class="form-control text-capitalize" type="text" name="Exercise type" id="ExerciseType" placeholder="enter the exercise type .." required>
+                </div>
+                <div class="col-12 col-md-6 mb-3">
+                    <label  class="form-label fw-bold text-uppercase text-light" for="SubscriptionPeriod">Subscription Period</label>
+                    <select class="form-select" name="Subscription period" id="SubscriptionPeriod" required>
+                        <option value="">Choose subscribe Period</option>
+                        <option value="1-month">1-month</option>
+                        <option value="3-month">3-month</option>
+                        <option value="6-month">6-month</option>
+                        <option value="year">1-year</option>
+                    </select>
+                </div>
+                <div class="col-12 col-md-6 mb-3 align-self-end ">
+                    <button class="btn btn-danger fw-bold" type="button" id="sendBTN"> Add player</button>
+                    <button class="btn btn-outline-light fw-bold" type="reset"> reset fields </button>
+                </div>
+            </form>
+            <article class="row subscriberList">
+                <table class="table table-danger table-srapied">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</td>
+                            <th scope="col">Name</td>
+                            <th scope="col">Exercise type</td>
+                            <th scope="col">Subscription period</td>
+                            <th scope="col">Expiry date</td>
+                            <th scope="col">Price</td>
+                            <th scope="col">subscribe Status</td>
+                        </tr>
+                    </thead>
+                    <tbody id="innerData">
+                        <tr>
+                            <th scope="row">1</th>
+                            <td></td>
+                            <td></td>
+                            <td>no data yet try to add ..</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+    </main>
+
+    <script src="assets/js/vendor/sweetalert.min.js"></script>
+    <script src="assets/js/ManagmentSystem.js" type="module"></script>
+    <script src="assets/js/add.js" type="module"></script>
+</body>
+</html>
