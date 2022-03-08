@@ -13,8 +13,16 @@ const totalBox  = document.getElementById('totalTrainees');
 subscriberSystem.displayUserData(subscriberSystem.trainees);
 subscriberSystem.getTraineesFromLocalStorage();
 subscriberSystem.checkIfExpired();
-
 subscriberSystem.displayStatistics(expireBox,activeBox,totalBox);
+
+
+// if conditions
+if (window.innerWidth <= 890) {
+    document.querySelector('.sideHeader').classList.add('hide')
+}else{
+    
+    document.querySelector('.sideHeader').classList.remove('hide')
+}
 
 
 // start event lisiners

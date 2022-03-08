@@ -12,6 +12,15 @@ const sendBTN = document.getElementById('sendBTN');
 subscriberSystem.displayUserData(subscriberSystem.trainees);
 subscriberSystem.getTraineesFromLocalStorage();
 subscriberSystem.checkIfExpired();
+fullName.focus();
+
+// if conditions
+if (window.innerWidth <= 890) {
+    document.querySelector('.sideHeader').classList.add('hide')
+}else{
+    
+    document.querySelector('.sideHeader').classList.remove('hide')
+}
 
 // Start events
 TogglerIcon.addEventListener('click',()=>{
